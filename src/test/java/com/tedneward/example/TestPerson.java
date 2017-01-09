@@ -47,17 +47,12 @@ public class TestPerson {
   public void exercisePesonEquals() {
     Person p1 = new Person("Ted", 43, 250000);
     Person p2 = p1;
-	
     assertEquals(p1, p2);
     
     Person p3 = new Person("Ted", 43, 250000);
-	System.out.println(p1.equals(p3));
-	
     assertEquals(p1, p3);
-	System.out.println(p1.equals(p3));
     
     Person p4 = new Person("Ted", 43, 500000);
-	
     assertEquals(p1, p4);
     
     Person p5 = new Person("Ted", 45, 250000);
@@ -85,7 +80,7 @@ public class TestPerson {
   public void useNaturalComparison() {
     List<Person> people = Person.getNewardFamily();
     Collections.sort(people);
-   
+    
     assertEquals(new Person("Ted", 41, 250000), people.get(0));
     assertEquals(new Person("Charlotte", 43, 150000), people.get(1));
     assertEquals(new Person("Michael", 22, 10000), people.get(2));
@@ -104,9 +99,18 @@ public class TestPerson {
     assertEquals("", pce.getOldValue());
     assertEquals("012-34-5678", pce.getNewValue());
     */
-
+	
+	ted.addPropertyChangeListener(new PropertyChangeListener() {
+		public void propertyChange(PropertyChangeEvent pce) {
+			assertEquals("ssn", pce.getPropertyName());
+			assertEquals("", pce.getOldValue());
+			assertEquals("012-34-5678", pce.getNewValue());
+		}});
+		
     // ============ YOUR CHANGES END HERE
     
-   
+    assertEquals(false, ted.getPropertyChangeFired());
+    ted.setSSN("012-34-5678");
+    assertEquals(true, ted.getPropertyChangeFired());
   }
 }

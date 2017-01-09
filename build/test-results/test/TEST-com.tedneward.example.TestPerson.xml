@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tedneward.example.TestPerson" tests="8" skipped="0" failures="0" errors="0" timestamp="2017-01-09T06:45:35" hostname="EthansSurface" time="0.015">
+<testsuite name="com.tedneward.example.TestPerson" tests="8" skipped="0" failures="0" errors="0" timestamp="2017-01-09T19:25:26" hostname="EthansSurface" time="0.0">
   <properties/>
-  <testcase name="viewReadabletoString" classname="com.tedneward.example.TestPerson" time="0.015"/>
+  <testcase name="useAgeComparator" classname="com.tedneward.example.TestPerson" time="0.0"/>
+  <testcase name="catchPropertyChange" classname="com.tedneward.example.TestPerson" time="0.0"/>
   <testcase name="useNaturalComparison" classname="com.tedneward.example.TestPerson" time="0.0"/>
-  <testcase name="exerciseTheBasics" classname="com.tedneward.example.TestPerson" time="0.0"/>
+  <testcase name="viewReadabletoString" classname="com.tedneward.example.TestPerson" time="0.0"/>
   <testcase name="setAgeToBeNegative" classname="com.tedneward.example.TestPerson" time="0.0"/>
   <testcase name="exercisePesonEquals" classname="com.tedneward.example.TestPerson" time="0.0"/>
-  <testcase name="catchPropertyChange" classname="com.tedneward.example.TestPerson" time="0.0"/>
+  <testcase name="exerciseTheBasics" classname="com.tedneward.example.TestPerson" time="0.0"/>
   <testcase name="setNameToNull" classname="com.tedneward.example.TestPerson" time="0.0"/>
-  <testcase name="useAgeComparator" classname="com.tedneward.example.TestPerson" time="0.0"/>
-  <system-out><![CDATA[true
-true
-]]></system-out>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
