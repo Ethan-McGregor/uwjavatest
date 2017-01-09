@@ -1,7 +1,7 @@
 import java.beans.*;
 import java.util.*;
 
-class Point 
+ class Point 
 	implements Comparable<Point>
 {
 	private int x;
@@ -54,7 +54,7 @@ class Point
 }
 
 
-public class Hello
+ class Hello
 {
 	public static void main(String... args) {
 		Point p1 = new Point(1,2); //p1.x = 1; p1.y = 2;
@@ -72,22 +72,21 @@ public class Hello
 		Collections.sort(points, new Point.YComparator());
 		System.out.println(points);
 
-		final int foo = 12;
+		final int foo = 24;
 		p2.addPropertyChangeListener(new PropertyChangeListener() {
 			public void propertyChange(PropertyChangeEvent evt) {
-				foo = 24;
+				
 				System.out.println("Object " + evt.getSource() + " says that " +
 					evt.getPropertyName() + " is now " + evt.getNewValue() + foo);
 			}
 		} );
 		p2.addPropertyChangeListener((evt) -> {
-			foo = 24;
+			
 			System.out.println("Object " + evt.getSource() + " says that " +
 				evt.getPropertyName() + " is now " + evt.getNewValue() + foo);
 		} );
 
 		p2.setX(24);
-
 	}
 }
 
